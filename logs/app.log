@@ -29,3 +29,6 @@
 24-08-2021 19:28:06 - [INFO] -  file_handler - (file_handler.py).read_csv(line 24) - Csv file read from ../data/data.csv.
 24-08-2021 19:47:56 - [INFO] -  file_handler - (file_handler.py).read_csv(line 24) - Csv file read from ../data/data.csv.
 24-08-2021 21:45:17 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
+24-08-2021 21:50:55 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
+24-08-2021 21:54:51 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
+24-08-2021 22:02:16 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.

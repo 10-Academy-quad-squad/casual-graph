@@ -17,10 +17,14 @@ def violinplot(x, y, start: int = 0, num_features: int = 10):
     plt.show()
 
 
-def plot_count(df: pd.DataFrame, column: str) -> None:
+def plot_count(df: pd.DataFrame, column: str, xcolumn: str = None, ycolumn: str = None) -> None:
     plt.figure(figsize=(12, 7))
     sns.countplot(data=df, x=column)
-    plt.title(f'Plot count of {column}', size=20, fontweight='bold')
+    plt.title(f'Plot count of {column}', size=18, fontweight='bold')
+    if xcolumn:
+        plt.xlabel(xcolumn)
+    if xcolumn:
+        plt.ylabel(ycolumn)
     plt.show()
 
 
