@@ -2,7 +2,7 @@ name: Train-in-the-cloud
 on:
   push:
     branches:
-      - "train*"
+      - "train"
 jobs:
   # deploy-runner:
   #   runs-on: ubuntu-latest
