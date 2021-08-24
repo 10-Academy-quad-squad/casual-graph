@@ -10,16 +10,8 @@ jobs:
       - uses: iterative/setup-cml@v1
       - uses: actions/checkout@v2
       - name: Deploy runner on EC2
-        env:
-          REPO_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          cml-runner \
-              --cloud aws \
-              --cloud-region us-west \
-              --cloud-type t2.micro \
-              --labels cml-runner
+          echo "hosting service setup"
   train-model:
     needs: deploy-runner
     runs-on: [self-hosted, cml-runner]
