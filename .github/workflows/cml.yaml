@@ -2,21 +2,21 @@ name: Train-in-the-cloud
 on:
   push:
     branches:
-      - "train"
+      - "train*"
 jobs:
-  deploy-runner:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: iterative/setup-cml@v1
-      - uses: actions/checkout@v2
-      - name: Deploy runner on EC2
-        run: |
-          echo "hosting service setup"
+  # deploy-runner:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: iterative/setup-cml@v1
+  #     - uses: actions/checkout@v2
+  #     - name: Deploy runner on EC2
+  #       run: |
+  #         echo "hosting service setup"
   train-model:
     needs: deploy-runner
-    runs-on: [self-hosted, cml-runner]
-    container: docker://iterativeai/cml:0-dvc2-base1-gpu
-    steps:
+    # runs-on: [self-hosted, cml-runner]
+    # container: docker://iterativeai/cml:0-dvc2-base1-gpu
+    # steps:
       - uses: actions/checkout@v2
       - name: Train model
         env:
