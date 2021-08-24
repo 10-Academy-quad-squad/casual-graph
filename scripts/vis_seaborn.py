@@ -1,63 +1,66 @@
+import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-def plot_hist(df: pd.DataFrame, column: str, color: str) -> None:
-    # plt.figure(figsize=(15, 10))
-    # fig, ax = plt.subplots(1, figsize=(12, 7))
-    sns.displot(data=df, x=column, color=color, kde=True, height=7, aspect=2)
-    plt.title(f'Distribution of {column}', size=20, fontweight='bold')
+def violinplot(x, y, start: int = 0, num_features: int = 10):
+  data = pd.concat([y, x.iloc[:, start:num_features]], axis=1)
+  data = pd.melt( data, 
+                  id_vars="diagnosis",
+                  var_name="features",
+                  value_name='value')
+  plt.figure(figsize=(20, 12))
+  sns.violinplot(x="features", y="value", hue="diagnosis", data=data, split=True, inner="quart")
+  plt.xticks(rotation=90)
+  plt.show()
+
+
+def boxplot(x, y, start: int = 0, num_features: int = 10):
+    data = pd.concat([y, x.iloc[:, start:num_features]], axis=1)
+    data = pd.melt(data,
+                   id_vars="diagnosis",
+                   var_name="features",
+                   value_name='value')
+    plt.figure(figsize=(20, 12))
+    sns.boxplot(x="features", y="value", hue="diagnosis", data=data)
+    plt.xticks(rotation=90)
     plt.show()
 
 
-def plot_count(df: pd.DataFrame, column: str) -> None:
-    plt.figure(figsize=(12, 7))
-    sns.countplot(data=df, x=column)
-    plt.title(f'Distribution of {column}', size=20, fontweight='bold')
+def swarmplot(x, y, start: int = 0, num_features: int = 10):
+    data = pd.concat([y, x.iloc[:, start:num_features]], axis=1)
+    data = pd.melt(data,
+                   id_vars="diagnosis",
+                   var_name="features",
+                   value_name='value')
+    plt.figure(figsize=(20, 12))
+    sns.swarmplot(x="features", y="value", hue="diagnosis", data=data)
+    plt.xticks(rotation=90)
     plt.show()
 
 
-def plot_bar(df: pd.DataFrame, x_col: str, y_col: str, title: str, xlabel: str, ylabel: str) -> None:
-    plt.figure(figsize=(12, 7))
-    sns.barplot(data=df, x=x_col, y=y_col)
-    plt.title(title, size=20)
-    plt.xticks(rotation=75, fontsize=14)
-    plt.yticks(fontsize=14)
-    plt.xlabel(xlabel, fontsize=16)
-    plt.ylabel(ylabel, fontsize=16)
-    plt.show()
+def plot_correlation(x):
+  corr = x.corr()
+  mask = np.zeros_like(corr, dtype=np.bool)
+  mask[np.triu_indices_from(mask)] = True
+  cmap = sns.diverging_palette(230, 20, as_cmap=True)
+  fig, ax = plt.subplots(figsize=(24, 20))
+  heatmap = sns.heatmap(corr, mask=mask, square=True, linewidths=.5,
+                        vmin=-1, vmax=1, cmap='coolwarm', annot=True, fmt='.1f')
+  heatmap.set_title('Correlation between features',
+                    fontdict={'fontsize': 15}, pad=12)
+  fig.show()
 
 
-def plot_heatmap(df: pd.DataFrame, title: str, cbar=False) -> None:
-    plt.figure(figsize=(12, 7))
-    sns.heatmap(df, annot=True, cmap='viridis', vmin=0,
-                vmax=1, fmt='.2f', linewidths=.7, cbar=cbar)
-    plt.title(title, size=18, fontweight='bold')
-    plt.show()
-
-
-def plot_box(df: pd.DataFrame, x_col: str, title: str) -> None:
-    plt.figure(figsize=(12, 7))
-    sns.boxplot(data=df, x=x_col)
-    plt.title(title, size=20)
-    plt.xticks(rotation=75, fontsize=14)
-    plt.show()
-
-
-def plot_box_multi(df: pd.DataFrame, x_col: str, y_col: str, title: str) -> None:
-    plt.figure(figsize=(12, 7))
-    sns.boxplot(data=df, x=x_col, y=y_col)
-    plt.title(title, size=20)
-    plt.xticks(rotation=75, fontsize=14)
-    plt.yticks(fontsize=14)
-    plt.show()
-
-
-def plot_scatter(df: pd.DataFrame, x_col: str, y_col: str, title: str, hue: str, style: str) -> None:
-    plt.figure(figsize=(12, 7))
-    sns.scatterplot(data=df, x=x_col, y=y_col, hue=hue, style=style)
-    plt.title(title, size=20)
-    plt.xticks(fontsize=14)
-    plt.yticks(fontsize=14)
-    plt.show()
+def pairplot(x, y, cols):
+  data = x[cols]
+  data["diagnosis"] = y
+  g = sns.PairGrid(data, hue="diagnosis")
+  g.map_diag(sns.histplot)
+  g.map_offdiag(sns.scatterplot)
+  g.map_lower(sns.kdeplot, cmap="Blues_d")
+  g.map_upper(plt.scatter)
+  g.map_diag(sns.kdeplot, lw=3)
+  g.add_legend()
+  plt.show()
