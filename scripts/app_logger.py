@@ -5,13 +5,13 @@ from logging.handlers import TimedRotatingFileHandler
 
 class App_Logger:
 
-    log_formatter = logging.Formatter(f"%(asctime)s - [%(levelname)s] -  %(name)s - (%(filename)s).%(funcName)s(line %(lineno)d) - %(message)s",
-                datefmt="%d-%m-%Y %H:%M:%S")
+    log_formatter = logging.Formatter(
+        f"%(asctime)s - [%(levelname)s] -  %(name)s - (%(filename)s).%(funcName)s(line %(lineno)d) - %(message)s", datefmt="%d-%m-%Y %H:%M:%S")
 
     def __init__(self):
         pass
 
-    def get_file_handler(self) -> logging.FileHandler :
+    def get_file_handler(self) -> logging.FileHandler:
         # create logs folder if it doesn't exist
         Path("../logs").mkdir(parents=True, exist_ok=True)
         file_handler = TimedRotatingFileHandler(f"../logs/app.log", when='d')
