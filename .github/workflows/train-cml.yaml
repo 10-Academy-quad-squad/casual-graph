@@ -15,6 +15,8 @@ jobs:
   train-model:
     needs: deploy-runner
     # runs-on: [self-hosted, cml-runner]
+    runs-on: [self-hosted, cml-runner]
+
     # container: docker://iterativeai/cml:0-dvc2-base1-gpu
     steps:
       - uses: actions/checkout@v2
