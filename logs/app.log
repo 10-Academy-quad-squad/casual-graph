@@ -44,3 +44,13 @@
 25-08-2021 01:30:34 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
 25-08-2021 12:40:09 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
 25-08-2021 12:41:53 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
+26-08-2021 18:23:21 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/cleaned_data.csv.
+26-08-2021 18:23:43 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/cleaned_data.csv.
+26-08-2021 18:27:21 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/cleaned_data.csv.
+26-08-2021 18:27:42 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/cleaned_data.csv.
+26-08-2021 18:59:37 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/cleaned_data.csv.
+26-08-2021 19:02:28 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/cleaned_data.csv.
+26-08-2021 19:13:07 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/cleaned_data.csv.
+26-08-2021 19:13:40 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/cleaned_data.csv.
+26-08-2021 19:25:07 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/cleaned_data.csv.
+26-08-2021 19:26:53 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/cleaned_data.csv.
