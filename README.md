@@ -56,8 +56,14 @@ The repository has a number of files including python scripts, jupyter notebooks
 
 ## logs:
 - the folder containing log files (if it doesn't exist it will be created once logging starts)
+## root folder
+- [requirements.txt](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/requirements.txt): a text file lsiting the projet's dependancies
+- `setup.py`: a configuration file for installing the scripts as a package
+- [README.md](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/README.md): Markdown text with a brief explanation of the project and the repository structure.
 
-
-
+## Installation guide
+- git clone https://github.com/10-Academy-quad-squad/casual-graph.git
+- cd casual-graph
+- pip install -r requirements.txt
 
 
