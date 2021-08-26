@@ -1,5 +1,13 @@
 # casual-graph
+**Table of Contents**
 
+  - [Overview](#overview)
+  - [Project Structure](#project-structure)
+    - [data:](#data)
+    - [notebooks:](#notebooks)
+
+
+## Overview
 - A common frustration in the industry, especially when it comes to getting business insights from tabular data, is that the most interesting questions (from their perspective) are often not answerable with observational data alone. These questions can be similar to:
         - “What will happen if I halve the price of my product?”
         - “Which clients will pay their debts only if I call them?”
@@ -9,5 +17,14 @@ is often unknown, subject to personal knowledge and bias, or loosely
 connected to the available data. The main objective of this task is to
 highlight the importance of the matter in a concrete way.
 
-# Data
+## Project Structure
+The repository has a number of files including python scripts, jupyter notebooks, pdfs and text files. Here is their structure with a brief explanation.
+
+## Data
+    - We extracted the data from [kaggle](https://www.kaggle.com/uciml/breast-cancer-wisconsin-data) or
+    - from [UCI Machine Learning Repository](https://archive-beta.ics.uci.edu/ml/datasets?name=breast)
+## notebooks
+- [EDA.ipynb](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/notebooks/1.%20EDA.ipynb): a jupyter notebook for exploratory data analysis
+
+
 
