@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from causalnex.plots import plot_structure, NODE_STYLE, EDGE_STYLE
 from IPython.display import Markdown, display, Image, display_html
 
 
@@ -86,3 +87,12 @@ def view_df(df, subset=[], color='#66F582'):
         .format({"label": lambda x: x.upper()})\
         .set_properties(**{'background-color': 'white', 'color': 'black'})
     display_html(style._repr_html_(), raw=True)
+
+
+def vis_sm(sm):
+  viz = plot_structure(
+      sm,
+      graph_attributes={"scale": "2.0", 'size': 2.5},
+      all_node_attributes=NODE_STYLE.WEAK,
+      all_edge_attributes=EDGE_STYLE.WEAK)
+  return Image(viz.draw(format='png'))
