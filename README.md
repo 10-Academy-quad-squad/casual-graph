@@ -32,6 +32,9 @@ The repository has a number of files including python scripts, jupyter notebooks
 ## scripts
 - [app_logger.py](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/scripts/app_logger.py): a python script for logging
 - [file_handler.py](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/scripts/file_handler.py): a python script for handling reading and writing of csv, pickle and other files
+- [config.py](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/scripts/config.py):  class for exploring the data
+- [df_cleaner.py](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/scripts/df_cleaner.py): dataframe cleaner helper functions
+- 
 
 
 
