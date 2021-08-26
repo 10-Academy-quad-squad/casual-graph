@@ -47,7 +47,8 @@ The repository has a number of files including python scripts, jupyter notebooks
     - a class for Exploratory Data Analysis
 - [file_handler.py](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/scripts/file_handler.py)
     - a class for reading and saving datafram.
-
+- [vis_plotly.py](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/scripts/vis_plotly.py)
+    - a collection of methods for ploting a graph
 
 
 
