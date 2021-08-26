@@ -51,7 +51,12 @@ The repository has a number of files including python scripts, jupyter notebooks
     - a collection of methods for ploting a graph
 - [vis_seaborn.py](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/scripts/vis_seaborn.py)
     - a collection of methods for ploting a graph
-    
+## tests:
+- the folder containing unit tests for components in the scripts
+
+## logs:
+- the folder containing log files (if it doesn't exist it will be created once logging starts)
+
 
 
 
