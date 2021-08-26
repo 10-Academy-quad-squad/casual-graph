@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from IPython.display import Markdown, display, Image, display_html
 
 
 def violinplot(x, y, start: int = 0, num_features: int = 10):
@@ -76,3 +77,12 @@ def pairplot(x, y, cols):
     g.map_diag(sns.kdeplot, lw=3)
     g.add_legend()
     plt.show()
+
+
+def view_df(df, subset=[], color='#66F582'):
+    df = df.reset_index()
+    style = df.style.set_table_attributes("style='display:inline'").\
+        bar(subset=subset, axis=1, color=color)\
+        .format({"label": lambda x: x.upper()})\
+        .set_properties(**{'background-color': 'white', 'color': 'black'})
+    display_html(style._repr_html_(), raw=True)
