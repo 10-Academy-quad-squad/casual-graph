@@ -5,7 +5,11 @@
   - [Project Structure](#project-structure)
     - [data:](#data)
     - [notebooks:](#notebooks)
-
+    - [scripts](#scripts)
+    - [tests:](#tests)
+    - [logs:](#logs)
+    - [root folder](#root-folder)
+  - [Installation guide](#installation-guide)
 
 ## Overview
 - A common frustration in the industry, especially when it comes to getting business insights from tabular data, is that the most interesting questions (from their perspective) are often not answerable with observational data alone. These questions can be similar to:
@@ -25,6 +29,9 @@ The repository has a number of files including python scripts, jupyter notebooks
 - from [UCI Machine Learning Repository](https://archive-beta.ics.uci.edu/ml/datasets?name=breast)
 ## notebooks
 - [EDA.ipynb](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/notebooks/1.%20EDA.ipynb): a jupyter notebook for exploratory data analysis
+## scripts
+- [app_logger.py](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/scripts/app_logger.py): a python script for logging
+- [file_handler.py](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/scripts/file_handler.py): a python script for handling reading and writing of csv, pickle and other files
 
 
 
