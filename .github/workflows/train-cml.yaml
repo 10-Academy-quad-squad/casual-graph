@@ -13,8 +13,11 @@ jobs:
       - name: Train Casual model
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_SEC }}
+
         run: |
           pip install -r requirements.txt
+          dvc pull
           python train.py
           cat metrics.txt >> report.md
           cml-send-comment report.md
