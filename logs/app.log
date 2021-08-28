@@ -111,3 +111,5 @@
 28-08-2021 08:48:52 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
 28-08-2021 09:26:50 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
 28-08-2021 09:37:00 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
+28-08-2021 10:49:44 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
+28-08-2021 12:46:54 - [INFO] -  file_handler - (file_handler.py).read_csv(line 25) - Csv file read from ../data/data.csv.
