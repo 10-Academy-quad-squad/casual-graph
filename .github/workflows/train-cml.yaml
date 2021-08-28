@@ -16,7 +16,7 @@ jobs:
         run: |
           pip install -r requirements.txt
           cd scripts
-          python trainRegressor.py
+          python train.py
           cd ..
           cat metrics.txt >> report.md
           cml-send-comment report.md
