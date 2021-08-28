@@ -8,3 +8,6 @@ streamlit==0.84.1
 scipy==1.7.0
 scikit-learn==0.24.2
 plotly==5.1.0
+causalnex==0.10.0
+pygraphviz
+
