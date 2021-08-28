@@ -1,9 +1,9 @@
 import pandas as pd
 import pickle
-import dvc.api
+# import dvc.api
 from time import gmtime, strftime
-from app_logger import App_Logger
-from config import Config
+from .app_logger import App_Logger
+from .config import Config
 
 
 class FileHandler():
