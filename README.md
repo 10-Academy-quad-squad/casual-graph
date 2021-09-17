@@ -21,12 +21,15 @@ is often unknown, subject to personal knowledge and bias, or loosely
 connected to the available data. The main objective of this task is to
 highlight the importance of the matter in a concrete way.
 
+- In this project we applied a casual graph model on a breast cancer dataset
+using a library called CausalNex in order to learn about the cause and effect structure behind
+the diagnosis of breast cancer.
+
 ## Project Structure
 The repository has a number of files including python scripts, jupyter notebooks, pdfs and text files. Here is their structure with a brief explanation.
 
 ## Data
-- We extracted the data from [kaggle](https://www.kaggle.com/uciml/breast-cancer-wisconsin-data) or
-- from [UCI Machine Learning Repository](https://archive-beta.ics.uci.edu/ml/datasets?name=breast)
+- We are using the Breast Cancer Wisconsin (Diagnostic) Data Set extracted from [kaggle](https://www.kaggle.com/uciml/breast-cancer-wisconsin-data)
 ## notebooks
 - [EDA.ipynb](https://github.com/10-Academy-quad-squad/casual-graph/blob/dev-abreham/notebooks/1.%20EDA.ipynb): a jupyter notebook for exploratory data analysis
 ## scripts
